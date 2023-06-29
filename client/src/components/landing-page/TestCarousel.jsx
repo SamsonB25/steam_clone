@@ -202,6 +202,7 @@ const TestCarousel = () => {
                     >
                       <img
                         src={miniPic}
+                        loading="lazy"
                         alt={`MiniPic ${carouselSlide}`}
                         className="h-[69px] w-[162px] hover:brightness-125 cursor-pointer mt-[-13px] mr-[-10px]"
                       />

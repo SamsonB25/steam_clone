@@ -20,6 +20,7 @@ const WishlistRow = ({ game }) => {
                     <Link to={`/product/${item.id}`}>
                       <img
                         src={item.game_image}
+                        loading="lazy"
                         alt={item.title}
                         className="h-full w-full object-cover"
                       />
@@ -32,6 +33,7 @@ const WishlistRow = ({ game }) => {
                   <div>
                     <img
                       src="https://store.akamai.steamstatic.com/public/images/v6/wishlist/handle.png"
+                      loading="lazy"
                       className="absolute left-[9px] top-[43%]"
                     />
                   </div>

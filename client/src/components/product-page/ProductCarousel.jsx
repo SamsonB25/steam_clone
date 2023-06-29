@@ -88,7 +88,11 @@ const ProductCarousel = ({ game }) => {
           <div id="right-col" className="w-[324px] ml-0 float-right">
             <div id="glance_ctn" className="p-0">
               <div id="game-image" className="mb-[7px]">
-                <img src={game.game_image} className="w-[324px] h-[151px]" />
+                <img
+                  src={game.game_image}
+                  loading="lazy"
+                  className="w-[324px] h-[151px]"
+                />
               </div>
               <div
                 id="game-description"
@@ -170,6 +174,7 @@ const ProductCarousel = ({ game }) => {
                     {carouselData[mainDisplay].type === "image" && (
                       <img
                         src={carouselData[mainDisplay].url}
+                        loading="lazy"
                         alt="Carousel Image"
                         className="w-full h-full"
                       />
@@ -205,11 +210,12 @@ const ProductCarousel = ({ game }) => {
                       onClick={() => handleMiniClick(index)}
                     >
                       {item.type === "image" ? (
-                        <img src={item.url} />
+                        <img src={item.url} loading="lazy" />
                       ) : (
                         <>
                           <img
                             className="brightness-75"
+                            loading="lazy"
                             src={game.game_image}
                           />
                           <div
